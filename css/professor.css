@@ -1,0 +1,64 @@
+body article img {
+    width: 80%;
+    padding: 10%;
+}
+
+article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        'title title'
+        'subtitle subtitle'
+        'foto summary'
+        'links links'
+        'link_1 link_1'
+        'link_2 link_2';
+}
+
+#title {
+    grid-area: title;
+}
+
+#subtitle {
+    grid-area: subtitle;
+}
+
+
+#foto {
+    grid-area: foto;
+}
+
+
+#title {
+    grid-area: title;
+}
+
+
+#summary {
+    grid-area: summary;
+}
+
+
+#link_1 {
+    grid-area: link_1;
+}
+
+
+#link_2 {
+    grid-area: link_2;
+}
+
+
+@media only screen and (orientation: portrait) {
+    article {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'title '
+            'subtitle'
+            'foto'
+            'summary'
+            'links'
+            'link_1'
+            'link_2';
+    }
+}

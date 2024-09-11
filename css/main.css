@@ -1,0 +1,95 @@
+html{
+    transition: 0.4s;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-family: "Fira Sans","Trebuchet MS",Ubuntu,Helvetica,Arial sans-serif;
+    font-size: large;
+    background-color: rgb(202, 61, 61);
+}
+
+body{
+    height: 100%;
+    min-height: 100%;
+    margin: 0;
+    border: 0;
+    padding: 0;
+    display: grid;
+}
+
+article{
+    padding-top: 3vh;
+    padding-bottom: 3vh;
+    margin-left: 7vw;
+    margin-right: 7vw;
+}
+
+
+/*Estilo do menu lateral*/
+nav {
+    height: 100%;
+    width: 5vw;
+    position: fixed;
+    background-color: beige;
+    transition: 0.4s;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+nav:hover {
+    width: 10vw;
+}
+
+nav div {
+    height: 100%;
+    width: 100%;
+}
+
+nav div:hover {
+    background-color: inherit;
+    filter: brightness(80%);
+}
+
+nav a {
+    height: 100%;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position-x: center;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+}
+
+nav img {
+    width: 2vw;
+    padding: 10%;
+}
+
+/*Responsividade*/
+@media screen and (min-width: 1440px) {
+    html{
+        font-size: xx-large;
+    }
+}
+@media only screen and (orientation: portrait) {
+    nav {
+        width: 100vw;
+        height: 10vh;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    nav:hover {
+        width: 100vw;
+    }
+
+    nav img {
+        width: 5vw;
+        /*padding: 2.5vh;*/
+    }
+
+    article {
+        padding-top: 10vh;
+    }
+}
